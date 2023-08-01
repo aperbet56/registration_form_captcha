@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulaire avec captcha</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="login__form">
+      <h2 class="form__title">S'inscrire</h2>
+      <div class="form__input">
+        <label for="name">Nom</label>
+        <input type="text" id="name" name="name" required />
+        <p id="lastNameErrorMsg"></p>
+      </div>
+      <div class="form__input">
+        <label for="password">Mot de passe</label>
+        <input type="password" id="password" name="password" required />
+        <p id="passwordErrorMsg"></p>
+      </div>
+      <div class="captcha">
+        <label for="captcha__input">Entrez le Capcha</label>
+        <div class="preview"></div>
+        <div class="captcha__form">
+          <input
+            type="text"
+            id="captcha__form"
+            name="captcha__form"
+            placeholder="Entrez le captcha"
+            required
+          />
+          <button class="captcha__btn__refresh">
+            <i class="fa fa-refresh"></i>
+          </button>
+        </div>
+      </div>
+      <div class="form__input">
+        <button id="login__btn">S'inscrire</button>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

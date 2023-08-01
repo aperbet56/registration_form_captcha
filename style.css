@@ -1,0 +1,110 @@
+/**** Reset ****/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+
+/**** Style général de la page ****/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.login__form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 500px;
+    padding: 20px 30px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form__title {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px 0 30px;
+    color: #111111;
+}
+
+.form__input {
+    margin: 10px 0;
+}
+
+
+label {
+    display: block;
+    font-size: 16px;
+    color: #111111;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #888888;
+    font-size: 16px;
+}
+
+.form__input p {
+    margin: 0;
+	color: #f52626;
+	font-size: 15px;
+	margin-left: 8px;
+}
+
+.captcha {
+    margin: 15px 0;
+}
+
+.preview {
+    color: #555555;
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    letter-spacing: 8px;
+    border: 1px dashed #888888;
+    font-family: "monospace";
+    margin-bottom: 10px;
+}
+
+.captcha__form {
+    display: flex;
+}
+
+.captcha__form input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #888888;
+}
+
+.captcha__btn__refresh {
+    cursor: pointer;
+    background-color: #888888;
+    color: #eeeeee;
+    width: 40px;
+}
+
+#login__btn {
+    background-color: #ac81ff;
+    color: #ffffff;
+    cursor: pointer;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
