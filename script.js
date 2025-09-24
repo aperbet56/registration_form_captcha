@@ -4,8 +4,8 @@ const regexPassword =
   /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.* ).{8,16}$/;
 
 // Récupération des différents éléments
-let lastName = document.querySelector("#name");
-let password = document.querySelector("#password");
+const lastName = document.querySelector("#name");
+const password = document.querySelector("#password");
 const submitBtn = document.querySelector("#login__btn");
 const userInput = document.querySelector("#captcha__form");
 const refreshBtn = document.querySelector(".captcha__btn__refresh");
@@ -19,7 +19,7 @@ const lastNameValidation = (lastName) => {
   // Ecoute de l'événement "change" sur l'input firstName
   lastName.addEventListener("change", (e) => {
     e.preventDefault();
-    if (regexName.test(lastName.value) === false) {
+    if (regexName.test(lastName.value) == false) {
       document.querySelector("#lastNameErrorMsg").textContent =
         "Veuillez saisir un nom valide, ex : Dupont";
       return false;
@@ -37,7 +37,7 @@ const passwordValidation = (password) => {
   // Ecoute de l'événement "change" sur l'input password
   password.addEventListener("change", (e) => {
     e.preventDefault();
-    if (regexPassword.test(password.value) === false) {
+    if (regexPassword.test(password.value) == false) {
       document.querySelector("#passwordErrorMsg").textContent =
         "Votre mot de passe doit contenir entre 8 et 16 caractères dont une majuscule, une minuscule, un chiffre et un caractère spécial.";
       return false;
@@ -97,5 +97,12 @@ submitBtn.addEventListener("click", (e) => {
     alert("Veuillez remplir correctement les différents champs !!!");
   } else {
     alert("Inscription réussie !");
+    // Rechargement de la page
+    window.location.reload();
+    lastName.value = "";
+    password.value = "";
+    userInput.value = "";
+    preview.value = "";
+    window.scrollTo(0, 0);
   }
 });
