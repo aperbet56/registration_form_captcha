@@ -19,7 +19,7 @@ const lastNameValidation = (lastName) => {
   // Ecoute de l'événement "change" sur l'input firstName
   lastName.addEventListener("change", (e) => {
     e.preventDefault();
-    if (regexName.test(lastName.value) == false) {
+    if (regexName.test(lastName.value) === false) {
       document.querySelector("#lastNameErrorMsg").textContent =
         "Veuillez saisir un nom valide, ex : Dupont";
       return false;
@@ -37,7 +37,7 @@ const passwordValidation = (password) => {
   // Ecoute de l'événement "change" sur l'input password
   password.addEventListener("change", (e) => {
     e.preventDefault();
-    if (regexPassword.test(password.value) == false) {
+    if (regexPassword.test(password.value) === false) {
       document.querySelector("#passwordErrorMsg").textContent =
         "Votre mot de passe doit contenir entre 8 et 16 caractères dont une majuscule, une minuscule, un chiffre et un caractère spécial.";
       return false;
@@ -91,7 +91,7 @@ submitBtn.addEventListener("click", (e) => {
   e.preventDefault();
   if (
     regexName.test(lastName.value) === false ||
-    regexPassword.test(password.value) == false ||
+    regexPassword.test(password.value) === false ||
     userInput.value !== text
   ) {
     alert("Veuillez remplir correctement les différents champs !!!");
