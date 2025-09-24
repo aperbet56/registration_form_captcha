@@ -3,7 +3,7 @@ const regexName = /^[A-Z][A-Za-z\é\è\ê\ô\-]+$/;
 const regexPassword =
   /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.* ).{8,16}$/;
 
-// Récupération des différents éléments
+// Récupération des différents éléments HTML5
 const lastName = document.querySelector("#name");
 const password = document.querySelector("#password");
 const submitBtn = document.querySelector("#login__btn");
